@@ -40,7 +40,12 @@ const StartGame = (props) => {
   };
   let confirmedOutput;
   if (confirmed) {
-    confirmedOutput = <Text>the choosen Number is {seleNumber}</Text>;
+    confirmedOutput = (
+      <Card style={styles.summaryContainer}>
+        {" "}
+        <Text>the choosen Number is {seleNumber}</Text>
+      </Card>
+    );
   }
   return (
     <TouchableWithoutFeedback
@@ -111,5 +116,8 @@ const styles = StyleSheet.create({
   input: {
     width: 50,
     textAlign: "center",
+  },
+  summaryContainer: {
+    marginTop: 20,
   },
 });
